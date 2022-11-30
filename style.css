@@ -1,0 +1,88 @@
+:root {
+  --bg-color: rgb(230, 234, 247);
+  --text-elem-bg-color: rgb(255, 255, 255);
+  --btn-primary: rgb(35, 97, 232);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+.container {
+  background-color: var(--text-elem-bg-color);
+  margin: 6rem 2rem;
+  padding: 2rem;
+}
+.text-container {
+  padding: 1rem;
+  border-bottom: 3px dotted black;
+}
+.heading-text {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+.text {
+  font-size: 1.1rem;
+}
+.btn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background-color: var(--btn-primary);
+  border: none;
+  font-size: 1.4rem;
+  padding: 0.4rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  color: rgb(240, 234, 234);
+  cursor: pointer;
+}
+.preview {
+  background-color: white;
+  height: 500px;
+  width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background-color: white !important;
+  opacity: 1;
+}
+.preview > .cancel-btn {
+  display: inline-block;
+  margin: 1rem;
+  color: black;
+  outline: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.preview img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.preview.show {
+  display: block;
+}
+body:has(.show.preview) {
+  background-color: rgb(167, 165, 165) !important;
+  /* opacity: 0.2; */
+}
